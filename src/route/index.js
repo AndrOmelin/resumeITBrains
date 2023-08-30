@@ -584,6 +584,9 @@ router.get('/program', function (req, res) {
           country: 'France',
         },
         date: '2023-06-15',
+       
+       
+       
         program: [
           {
             name: 'Museum Visit',
@@ -602,7 +605,7 @@ router.get('/program', function (req, res) {
                     name: 'Mona Lisa',
                     artist: 'Leonardo da Vinci',
                     description: 'Iconic portrait painting',
-                    audio_guide: true,
+                    audio_guide: false,
                   },
                   {
                     name: 'Winged Victory of Samothrace',
@@ -620,6 +623,7 @@ router.get('/program', function (req, res) {
               },
             },
           },
+
           {
             name: 'Cultural Show',
             type: 'Music and Dance',
@@ -633,6 +637,7 @@ router.get('/program', function (req, res) {
                   country: 'France',
                 },
               },
+              
               performers: [
                 {
                   name: 'Mireille Mathieu',
@@ -643,6 +648,7 @@ router.get('/program', function (req, res) {
                   type: 'Classical ballet company',
                 },
               ],
+
               guide: {
                 name: 'Sophie',
                 language: 'English',
