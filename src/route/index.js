@@ -361,7 +361,11 @@ router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     
-    layout: 'person',
+    layout: 'bio',
+
+    page: {
+      title: 'Person page',
+    },
     
     person: {
       name: 'Emma Johnson',
@@ -463,7 +467,11 @@ router.get('/bio', function (req, res) {
 //             ↙ cюди вводимо назву файлу з сontainer
 res.render('bio', {
 
-  layout: 'bio',
+  layout: 'basic',
+
+  page: {
+    title: 'Bio page',
+  },
 
   name: 'Albert Einstein',
   birthdate: 'March 14, 1879',
@@ -574,7 +582,13 @@ router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
 
-    layout: 'program',
+    // layout: 'program',
+
+    layout: 'basic',
+
+    page: {
+      title: 'Program',
+    },
 
     program: {
       excursion: {
@@ -668,7 +682,11 @@ router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     
-    layout: 'web',
+    layout: 'basic',
+
+    page: {
+      title: 'Web',
+   },
 
     web: {
       languages: [
@@ -681,39 +699,40 @@ router.get('/web', function (req, res) {
             {
               name: 'div',
               description:
-                'Defines a division or a section in an HTML document.',
+                'Defines a division or a section in an HTML document.(div)',
               attributes: [
                 {
-                  name: 'id',
+                  name: 'id(div)',
                   description:
-                    'Specifies a unique id for an HTML element.',
+                    'specifies a unique id for an HTML element.(div)',
                 },
                 {
-                  name: 'class',
+                  name: 'class(div)',
                   description:
-                    'Specifies one or more class names for an HTML element.',
+                    'Specifies one or more class names for an HTML element.(div)',
                 },
               ],
             },
             {
               name: 'p',
               description:
-                'Defines a paragraph in an HTML document.',
+                'defines a paragraph in an HTML document.(p)',
               attributes: [
                 {
-                  name: 'id',
+                  name: 'id(p)',
                   description:
-                    'Specifies a unique id for an HTML element.',
+                    'Specifies a unique id for an HTML element.(p)',
                 },
                 {
-                  name: 'class',
+                  name: 'class(p)',
                   description:
-                    'Specifies one or more class names for an HTML element.',
+                    'Specifies one or more class names for an HTML element.(p)',
                 },
               ],
             },
           ],
         },
+
         {
           name: 'CSS',
           version: 'CSS3',
@@ -755,6 +774,7 @@ router.get('/web', function (req, res) {
             },
           ],
         },
+        
         {
           name: 'JavaScript',
           version: 'ES6',
@@ -774,6 +794,7 @@ router.get('/web', function (req, res) {
                 },
               ],
             },
+            
             {
               name: 'getElementById()',
               description:
