@@ -361,7 +361,11 @@ router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     
-    layout: 'person',
+    layout: 'bio',
+
+    page: {
+      title: 'Person page',
+    },
     
     person: {
       name: 'Emma Johnson',
@@ -463,7 +467,11 @@ router.get('/bio', function (req, res) {
 //             ↙ cюди вводимо назву файлу з сontainer
 res.render('bio', {
 
-  layout: 'bio',
+  layout: 'basic',
+
+  page: {
+    title: 'Bio page',
+  },
 
   name: 'Albert Einstein',
   birthdate: 'March 14, 1879',
@@ -574,7 +582,13 @@ router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
 
-    layout: 'program',
+    // layout: 'program',
+
+    layout: 'basic',
+
+    page: {
+      title: 'Program',
+    },
 
     program: {
       excursion: {
@@ -658,6 +672,145 @@ router.get('/program', function (req, res) {
           },
         ],
       },
+    },
+  })
+})
+
+// ================================================================
+
+router.get('/web', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('web', {
+    
+    layout: 'basic',
+
+    page: {
+      title: 'Web',
+   },
+
+    web: {
+      languages: [
+        {
+          name: 'HTML',
+          version: 'HTML5',
+          description:
+            'Hypertext Markup Language is the standard markup language for creating web pages and web applications.',
+          elements: [
+            {
+              name: 'div',
+              description:
+                'Defines a division or a section in an HTML document.(div)',
+              attributes: [
+                {
+                  name: 'id(div)',
+                  description:
+                    'specifies a unique id for an HTML element.(div)',
+                },
+                {
+                  name: 'class(div)',
+                  description:
+                    'Specifies one or more class names for an HTML element.(div)',
+                },
+              ],
+            },
+            {
+              name: 'p',
+              description:
+                'defines a paragraph in an HTML document.(p)',
+              attributes: [
+                {
+                  name: 'id(p)',
+                  description:
+                    'Specifies a unique id for an HTML element.(p)',
+                },
+                {
+                  name: 'class(p)',
+                  description:
+                    'Specifies one or more class names for an HTML element.(p)',
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          name: 'CSS',
+          version: 'CSS3',
+          description:
+            'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in HTML or XML.',
+          properties: [
+            {
+              name: 'color',
+              description: 'Sets the color of the text.',
+              values: [
+                {
+                  value: 'red',
+                  description:
+                    'Sets the text color to red.',
+                },
+                {
+                  value: 'blue',
+                  description:
+                    'Sets the text color to blue.',
+                },
+              ],
+            },
+            {
+              name: 'background-color',
+              description:
+                'Sets the background color of an element.',
+              values: [
+                {
+                  value: 'white',
+                  description:
+                    'Sets the background color to white.',
+                },
+                {
+                  value: 'black',
+                  description:
+                    'Sets the background color to black.',
+                },
+              ],
+            },
+          ],
+        },
+        
+        {
+          name: 'JavaScript',
+          version: 'ES6',
+          description:
+            'JavaScript is a programming language used to create interactive effects within web browsers.',
+          functions: [
+            {
+              name: 'alert()',
+              description:
+                'Displays an alert box with a specified message and an OK button.',
+              parameters: [
+                {
+                  name: 'message',
+                  type: 'string',
+                  description:
+                    'The message to display in the alert box.',
+                },
+              ],
+            },
+            
+            {
+              name: 'getElementById()',
+              description:
+                'Returns the element with the specified ID.',
+              parameters: [
+                {
+                  name: 'id',
+                  type: 'string',
+                  description:
+                    'The ID of the element to find.',
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   })
 })
