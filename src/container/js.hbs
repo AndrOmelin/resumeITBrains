@@ -1,0 +1,116 @@
+<div>
+   {{!-- {{#with js}} --}}
+      <section>
+         <h1><button type="button" class="btn btn-danger"><b>{{name}}</b></button></h1>
+         <h3>{{description}}</h3>
+          <h4><button type="button" class="btn btn-link"><b>{{name}}</b></button>
+              was founded in 
+              {{#with history}}
+                <button type="button" class="btn btn-link"><b>{{year}}</b></button> 
+                   by
+                <button type="button" class="btn btn-link"><b>{{founder}}</b></button>
+              {{/with}}
+          </h4>
+      </section>
+<hr>
+      <section>
+        <h2><button type="button" class="btn btn-dark"><b>Data types in {{name}}:</b></button></h2>
+        {{!-- {{#each types}} --}}
+          <ol>
+            {{#each types}}
+               <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+            {{/each}} 
+          </ol>
+        {{!-- {{/each}}  --}}
+      </section>
+<hr>
+      <section>
+        <h2>Syntax {{name}}:</h2>
+        {{!-- {{#each syntax}} --}}
+          {{!-- <b> --}}
+          <ol>
+            {{#with syntax}}
+              <li><button type="button" class="btn btn-light"><b>Variables:</b></button>
+                  <ul>
+                   {{#each variables}}
+                     <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+                   {{/each}} 
+                  </ul>
+              </li>
+<hr>
+              <li><button type="button" class="btn btn-light"><b>Functions:</b></button>
+                  <ul>
+                    {{#each functions}}
+                      <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+                    {{/each}} 
+                  </ul>              
+              </li>
+<hr>
+              <li><button type="button" class="btn btn-light"><b>Conditionals:</b></button>
+                  <ul>
+                    {{#each conditionals}}
+                       <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+                    {{/each}} 
+                  </ul>               
+              </li>
+<hr>
+              <li><button type="button" class="btn btn-light"><b>Loops:</b></button>
+                  <ul>
+                   {{#each loops}}
+                      <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+                   {{/each}} 
+                  </ul> 
+              </li>
+<hr>
+              <li><button type="button" class="btn btn-light"><b>Classes:</b></button>
+                  <ul>
+                   {{#each classes}}
+                      <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+                   {{/each}} 
+                  </ul>               
+              </li>
+            {{/with}}
+          </ol>
+          {{!-- </b> --}}
+        {{!-- {{/each}}  --}}
+      </section>
+<hr>
+      <section>
+        <h2>Features in {{name}}:</h2>
+          <ol>
+            {{#each features}}
+              <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+            {{/each}} 
+          </ol>
+      </section>
+<hr>
+      <section>
+        <h2>Libraries {{name}}:</h2>
+          <ol>
+            {{#each libraries}}
+              <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+            {{/each}} 
+          </ol>
+      </section>
+<hr>
+      <section>
+        <h2>Tools {{name}}:</h2>
+          <ol>
+            {{#each tools}}
+              <li><button type="button" class="btn btn-link"><b>{{this}}</b></button></li>
+            {{/each}} 
+          </ol>
+      </section>
+<hr>
+      <section>
+        <h2>{{name}} communities:</h2>
+          <ol>
+            {{#each community}}
+              <li>
+                <button type="button" class="btn btn-link"><b>{{name}} ({{type}})</b></button>
+              </li>
+            {{/each}} 
+          </ol>
+      </section>
+   {{!-- {{/with}} --}}
+</div>
