@@ -1,0 +1,164 @@
+<div>
+   {{!-- {{#with js}} --}}
+      <section>
+         <h1><button type="button" class="btn btn-primary"><b>{{name}} - {{description}}, {{price}}UAH ;-)</b></button></h1>
+         <br>
+         <button type="button" class="btn btn-dark"><b>Characteristics:</b></button>
+         <br>
+          <br>
+          <b>
+           <ol>
+            {{#with features}}
+              <li><button type="button" class="btn btn-danger"><b>Processor:</b></button>
+               {{#with processor}}
+                  <ul>
+                    <li><b>Brand:</b>
+                    <button type="button" class="btn btn-link"><b>{{brand}}</b></button></li>
+                    <li><b>Model:</b>
+                    <button type="button" class="btn btn-link"><b>{{model}}</b></button></li>
+                    <li><b>Speed:</b>
+                    <button type="button" class="btn btn-link"><b>{{speed}}</b></button></li>
+                    <li><b>Cores:</b>
+                    <button type="button" class="btn btn-link"><b>{{cores}}</b></button></li>
+                    <li><b>Cache:</b>
+                    <button type="button" class="btn btn-link"><b>{{cache}}</b></button></li>
+                  </ul>
+               {{/with}}
+             </li> 
+          <hr> 
+             <li><button type="button" class="btn btn-danger"><b>Memory:</b></button>
+               {{#with memory}}
+                  <ul>
+                    <li><b>Type:</b>
+                    <button type="button" class="btn btn-link"><b>{{type}}</b></button></li>
+                    <li><b>Size:</b>
+                    <button type="button" class="btn btn-link"><b>{{size}}</b></button></li>
+                    <li><b>Speed:</b>
+                    <button type="button" class="btn btn-link"><b>{{speed}}</b></button></li>
+                  </ul>
+               {{/with}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Storage:</b></button>
+               {{#with storage}}
+                  <ul>
+                    <li><b>Type:</b>
+                    <button type="button" class="btn btn-link"><b>{{type}}</b></button></li>
+                    <li><b>Size:</b>
+                    <button type="button" class="btn btn-link"><b>{{size}}</b></button></li>
+                  </ul>
+               {{/with}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Display:</b></button>
+               {{#with display}}
+                  <ul>
+                    <li><b>Size:</b>
+                    <button type="button" class="btn btn-link"><b>{{size}}</b></button></li>
+                    <li><b>Resolution:</b>
+                    <button type="button" class="btn btn-link"><b>{{resolution}}</b></button></li>
+                    <li><b>Technology:</b>
+                    <button type="button" class="btn btn-link"><b>{{technology}}</b></button></li>
+                    <li><b>Color Space:</b>
+                    <button type="button" class="btn btn-link"><b>{{color_space}}</b></button></li>
+                    <li><b>Brightness:</b>
+                    <button type="button" class="btn btn-link"><b>{{brightness}}</b></button></li>
+                    <li><b>Refresh Rate:</b>
+                    <button type="button" class="btn btn-link"><b>{{refresh_rate}}</b></button></li>
+                  </ul>
+               {{/with}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Graphics:</b></button>
+               {{#with graphics}}
+                  <ul>
+                    <li><b>Brand:</b>
+                    <button type="button" class="btn btn-link"><b>{{brand}}</b></button></li>
+                    <li><b>Model:</b>
+                    <button type="button" class="btn btn-link"><b>{{model}}</b></button></li>
+                    <li><b>Memory:</b>
+                    <button type="button" class="btn btn-link"><b>{{memory}}</b></button></li>
+                  </ul>
+               {{/with}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Ports:</b></button>
+               {{#each ports}}
+                  <ul>
+                    <li><b>Type:</b>
+                    <button type="button" class="btn btn-link"><b>{{type}}</b></button></li>
+                    <li><b>Count:</b>
+                    <button type="button" class="btn btn-link"><b>{{count}}</b></button></li>
+                    {{!-- {{#each features}} --}}
+                    {{!-- <li> <b>Characteristics:</b> --}}
+                      <ul>
+                        {{#each features}}
+                         <li><b>{{this}}</b></li>
+                        {{/each}}  
+                      </ul>
+                    {{!-- </li> --}}
+                  </ul>
+               {{/each}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Battery:</b></button>
+                 {{#with battery}}
+                  <ul>
+                    <li><b>Type:</b>
+                    <button type="button" class="btn btn-link"><b>{{type}}</b></button></li>
+                    <li><b>Capacity:</b>
+                    <button type="button" class="btn btn-link"><b>{{capacity}}</b></button></li>
+                    <li><b>Life:</b>
+                    <button type="button" class="btn btn-link"><b>{{life}}</b></button></li>
+                  </ul>
+                 {{/with}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Weight:</b></button>
+                <ul>
+                    <li><b>Weight:</b>
+                    <button type="button" class="btn btn-link"><b>{{weight}}</b></button></li>
+                </ul>
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Dimensions:</b></button>
+                 {{#with dimensions}}
+                  <ul>
+                    <li><b>Height:</b>
+                    <button type="button" class="btn btn-link"><b>{{height}}</b></button></li>
+                    <li><b>Width:</b>
+                    <button type="button" class="btn btn-link"><b>{{width}}</b></button></li>
+                    <li><b>Depth:</b>
+                    <button type="button" class="btn btn-link"><b>{{depth}}</b></button></li>
+                  </ul>
+                 {{/with}}
+            </li>
+          <hr> 
+            <li><button type="button" class="btn btn-danger"><b>Operating System:</b></button>
+                <ul>
+                    <li><b>Operating System:</b>
+                    <button type="button" class="btn btn-link"><b>{{operating_system}}</b></button></li>
+                </ul>
+            </li>
+            {{!-- {{/with}}     --}}
+           </ol>
+           <hr> 
+
+           <button type="button" class="btn btn-secondary"><b>Accessories:</b></button>
+           {{!-- {{#each accessories}} --}}
+           <br>
+           <br>
+           <ol>
+            {{#each accessories}}
+              <li>
+              <button type="button" class="btn btn-success"><b>{{name}} ({{price}}USD)</b></button>
+              </li>
+              <br>
+           {{/each}} 
+           </ol>
+           {{!-- {{/each}} --}}
+           {{/with}}
+           </b>
+           <hr>  
+      </section>
+</div>
