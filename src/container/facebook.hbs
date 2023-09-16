@@ -1,0 +1,89 @@
+<div>
+   {{!-- {{#with js}} --}}
+      <section>
+         <h1><button type="button" class="btn btn-primary"><b>{{name}}</b></button></h1>
+         {{!-- <br> --}}
+         {{!-- {{#each users}} --}}
+         <button type="button" class="btn btn-secondary"><b>Users:</b></button>
+          <br>
+          <br>
+          <b>
+         {{!-- {{/each}} --}}
+
+           <ol>
+           {{#each users}}
+              <li>
+                <p><button type="button" class="btn btn-danger"><b>{{name}} ({{gender}}) - {{age}}, id:{{id}}</b></button></p>
+                <p><button type="button" class="btn btn-info"><b>Friends:</b></button></p>
+                <ol>
+                  {{#each friends}}
+                  <li>
+                    <p><button type="button" class="btn btn-warning"><b>{{name}} ({{gender}}) - {{age}}, id:{{id}}</b></button></p>
+                    <p>Mutual Friends:</p>
+                    <ol>
+                      {{#each mutual_friends}}
+                      <li>
+                        <button type="button" class="btn btn-success"><b>{{name}} ({{gender}}) - {{age}}, id:{{id}}</b></button>
+                        <br>
+                      </li>
+                        <br>
+                      {{/each}}
+                    </ol>
+                  </li>
+                  <hr>
+                  {{/each}}
+                </ol>
+                <p><button type="button" class="btn btn-dark"><b>Groups:</b></button></p>
+                  {{!-- {{#each groups}} --}}
+                  <ol>
+                  {{!-- {{#each friends}} --}}
+                    {{#each groups}}
+                      <li>
+                        <p><button type="button" class="btn btn-info"><b>{{name}}(id:{{id}})<br>
+                           <em>{{description}}</em></b></button>
+                        <p>Members:</p>
+                           <ol>
+                             {{#each members}}
+                             <li>
+                             <button type="button" class="btn btn-light"><b>{{name}} ({{gender}}) - {{age}}, id:{{id}}</b></button>
+                             <br>
+                             </li>
+                             <br>
+                             {{/each}}
+                           </ol>  
+                      </li>
+                        <hr>
+                    {{/each}}
+                  {{!-- {{/each}} --}}
+                 </ol>
+                  
+                  <ol>
+                  {{#each friends}}
+                    {{#each groups}}
+                      <li>
+                        <p><button type="button" class="btn btn-info"><b>{{name}}(id:{{id}})<br>
+                           <em>{{description}}</em></b></button>
+                        <p>Members:</p>
+                           <ol>
+                             {{#each members}}
+                             <li>
+                             <button type="button" class="btn btn-light"><b>{{name}} ({{gender}}) - {{age}}, id:{{id}}</b></button>
+                             <br>
+                             </li>
+                             <br>
+                             {{/each}}
+                           </ol> 
+                           <hr> 
+                      </li>
+                      {{!-- <hr> --}}
+                    {{/each}}
+                  {{/each}}
+                 </ol>
+                 {{!-- {{/each}} --}}
+              </li>
+              <hr>
+           {{/each}}   
+           </ol>
+           {{!-- <hr>   --}}
+      </section>
+</div>
