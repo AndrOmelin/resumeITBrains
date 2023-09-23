@@ -1435,11 +1435,13 @@ router.get('/task31', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
+
       button: {
         text: 'Lets start',
         href: 'https://nodejs.org/en/',
       },
     },
+
     header: {
       title: 'Welcome to Our Website',
       description:
@@ -1449,6 +1451,7 @@ router.get('/task31', function (req, res) {
         link: 'https://www.youtube.com/',
       },
     },
+
     city: {
       title: 'City list',
       cards: [
@@ -1461,7 +1464,7 @@ router.get('/task31', function (req, res) {
           description:
             'New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.',
           button: {
-            text: 'Read',
+            text: 'Read(NY)',
             href: 'https://github.com/',
           },
         },
@@ -1474,7 +1477,7 @@ router.get('/task31', function (req, res) {
           description:
             "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy, and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture, haute couture fashion houses, and designer boutiques along the Rue du Faubourg Saint-Honoré.",
           button: {
-            text: 'Read',
+            text: 'Read(P)',
             href: 'https://github.com/',
           },
         },
@@ -1487,7 +1490,7 @@ router.get('/task31', function (req, res) {
           description:
             "Tokyo, Japan’s bustling capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
           button: {
-            text: 'Reac',
+            text: 'Read(T)',
             href: 'https://github.com/',
           },
         },
@@ -1500,16 +1503,17 @@ router.get('/task31', function (req, res) {
           description:
             "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harborfront Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
           button: {
-            text: 'Reac',
+            text: 'Read(S)',
             href: 'https://github.com/',
           },
         },
       ],
     },
+
     winner: {
       title: 'Our winners',
       table: {
-        head: ['#', 'name', 'surname', 'nickname'],
+        head: ['#', 'Name', 'Surname', 'Nickname'],
         user: [
           {
             place: 1,
@@ -1532,6 +1536,7 @@ router.get('/task31', function (req, res) {
         ],
       },
     },
+    
     gallery: {
       title: 'Picture history',
       cards: [
@@ -1549,10 +1554,11 @@ router.get('/task31', function (req, res) {
         },
         {
           name: 'The Starry Night',
-          items: ['Painting', 'Oil on canvas', '1889'],
+          items: ['Painting', 'Oil on Canvas', '1889'],
         },
       ],
     },
+
     relaxion: {
       title: 'Relax',
       cards: [
@@ -1582,6 +1588,7 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
+
     rest: {
       cards: [
         {
@@ -1602,6 +1609,7 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
+
     proposition: {
       title: 'Proposition',
       card: [
@@ -1619,6 +1627,7 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
+    
     footer: {
       title: 'Navigation',
       navigation: [
