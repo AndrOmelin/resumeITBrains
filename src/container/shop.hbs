@@ -1,0 +1,152 @@
+<header>
+{{#with navigation}}
+{{!-- <div class="row"> --}}
+ <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+       {{#each links}}
+        <li class="nav-item">
+          <button type="button" class="btn btn-link">{{text}}</button>
+        </li>
+       {{/each}}
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+{{!-- </div> --}}
+{{/with}}
+  {{!-- <hr> --}}
+  <div>
+    {{#with newsBlock}}
+      <h1 align="center"><b>{{title}}</b></h1>
+      <br>
+       <div class="row">
+       {{#each cards}}
+        <div class="col-3">
+          <div class="card text-bg-dark mb-3" style="max-width: auto;">
+            <div class="card-header">{{header}}</div>
+               
+            <div class="card-body">
+            <h5 class="card-title">{{title}}
+                {{#if isTop}}<button type="button" class="btn btn-danger btn-sm">Топ</button>{{/if}}
+                {{#if isNew}}<button type="button" class="btn btn-success btn-sm">Нове</button>{{/if}}
+            </h5>
+            <p class="card-text">{{description}}</p>
+           </div>
+          </div>
+          <br>
+        </div>
+       {{/each}}
+      </div>
+    {{/with}}
+   <hr>
+  </div>
+</header>
+
+<main>
+  {{!-- <br> --}}
+  {{#with goodsBlock}}
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+       {{#each tabs}}
+        <li class="nav-item">
+          {{#if isActive}}<a class="nav-link active" aria-current="page" href="#">{{text}}</a>{{/if}}
+            {{#unless isActive}}  
+                {{#if isDisabled}}
+                 <a class="nav-link disabled" aria-disabled="true">{{text}}</a>
+                    {{else}}
+                 <button type="button" class="btn btn-link">{{text}}</button>
+                {{/if}}
+            {{/unless}}
+        </li>
+       {{/each}}
+      </ul>
+     </div>
+    </div>
+   </nav>
+  <br>
+    <div class="row">
+       {{#each cards}}
+        <div class="col-4">
+          <div class="card" style="width: 1auto;">
+           <img src={{image}} class="card-img-top" alt="Image">
+            <div class="card-body">
+             <h5 class="card-title">{{title}}
+                {{#if isHot}}<button type="button" class="btn btn-warning btn-sm text-light">HOT</button>{{/if}}
+                {{#if isNew}}<button type="button" class="btn btn-primary btn-sm">Нове</button>{{/if}}
+             </h5>
+             <p class="card-text">{{description}}</p>
+            </div>
+          </div>
+         <br>
+        </div>
+       {{/each}}
+    </div>
+  {{/with}}
+<hr>
+<br>
+  {{#with subscribe}}
+    <div class="card w-100 mb-3">
+    <div class="card-body text-bg-dark">
+    <h5 class="card-title">{{header}}</h5>
+    <p class="card-text">{{description}}</p>
+       {{#each buttons}} 
+         <div><a href="#" class="btn btn-primary">{{text}}</a></div>
+         <br>
+       {{/each}}
+    </div>
+    </div>
+  {{/with}}
+<br>
+<hr>
+<br>
+  {{#with service}}
+    <div class="card w-100 mb-3">
+    <div class="card-body text-bg-success text-center">
+    <h5 class="card-title ">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+       {{#each buttons}} 
+         <a href="#" class="btn btn-primary">{{text}}</a>
+       {{/each}}
+    </div>
+    </div>
+  {{/with}}
+  <br>
+ <hr>
+</main>
+
+<footer>
+   {{!-- <div> --}}
+    {{!-- {{#with footer}} --}}
+     {{!-- {{#each footer}} --}}
+       {{!-- overflow-hidden --}}
+       <div class="container text-left">
+        {{!-- {{#each footer}} --}}
+        <div class="row gx-2">
+         {{#each footer}}
+          {{!-- {{#each this}} --}}
+         <div class="col-2">
+          {{#each this}}
+            {{#if isDisabled}}
+                 <div class="p-2"><a class="nav-link disabled" aria-disabled="true">&#160&#160&#160{{text}}</a></div>
+              {{else}}
+                 <div class="p-2"><button type="button" class="btn btn-link">{{text}}</button></div>
+            {{/if}}
+          {{/each}}
+         </div>
+          {{!-- {{/each}} --}}
+         {{/each}}
+        </div>
+        {{!-- {{/each}} --}}
+       </div>
+       {{!-- {{/each}}  --}}
+    {{!-- {{/with}} --}}
+   {{!-- </div> --}}
+  <hr> 
+</footer>
