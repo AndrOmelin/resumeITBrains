@@ -1682,13 +1682,13 @@ router.get('/task31', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/shop', function (req, res) {
+router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shop', {
+  res.render('shophome', {
 
-    layout: 'basic',
+    layout: 'shop',
 
     // layout: 'shop',
     navigation: {
