@@ -48,10 +48,10 @@
                 <div class="col-2 text-start p-2 mt-4">
                   {{#each buttons}}
                     {{#if isPrimary}}
-                          <div><a href="{{link}}" class="btn btn-primary my-2" target="_blank">{{text}}</a></div>
+                          <div><a href="{{link}}" class="btn btn-primary my-2" target="_blank"><b>{{text}}</b></a></div>
                     {{/if}}
                     {{#if isDanger}}
-                          <div><a href="{{link}}" class="btn btn-danger" target="_blank">{{text}}</a></div>
+                          <div><a href="{{link}}" class="btn btn-outline-danger" target="_blank"><b>{{text}}</b></a></div>
                     {{/if}}
                   {{/each}}
                 </div>
