@@ -1,0 +1,255 @@
+<header>
+ {{#with navigation}}
+  <div class="card">
+   <div class="nav">
+    {{#each links}}
+     <div class="nav-item">
+        <a href="{{href}}" class="nav-link" target="_blank">{{text}}</a>
+     </div>
+    {{/each}}
+   </div>
+  </div>
+ {{/with}}
+
+ <div class="my-5">
+      <h1>{{header}}</h1> 
+ </div>
+
+{{#with purchase}}
+ <div class="my-4">
+  {{!-- {{#with purchase}} --}}
+   <nav class="nav nav-tabs">
+    {{#each tabs}}
+    <div class="nav-item">
+      {{#if isActive}}
+        <a href="#" class="nav-link active">{{text}}</a>
+           {{else}}
+        <a href="#" class="nav-link">{{text}}</a>
+      {{/if}}
+    </div>
+    {{/each}}
+   </nav>
+  {{!-- {{/with}} --}}
+  {{!-- <hr> --}}
+ </div>
+ <div class="row">
+  {{#with actionBlock}}
+    <div class="col-4 text-start mb-2">
+      {{#with input}}
+         <input class="form-control" placeholder="{{placeholder}}">
+      {{/with}}  
+    </div>
+        {{#each buttons}}
+          {{!-- <div class="col-2 text-start mb-3"> --}}
+            {{#if isSuccess}}
+            <div class="col-1 text-start mb-3">
+             <a href="{{link}}" class="btn btn-success" target="_blank"><b>{{text}}</b></a>
+            </div> 
+            {{/if}}
+              {{#unless isSuccess}}  
+                {{#if isOutline}}
+                <div class="col-2 text-start mb-3">
+                 <a href="{{link}}" class="btn btn-outline-success" target="_blank"><b>{{text}}</b></a>
+                </div>
+                    {{else}}
+                  <div class="col-2 text-start mb-3">
+                   <a href="{{link}}" class="btn btn-outline-danger" target="_blank"><b>{{text}}</b></a>
+                  </div> 
+                {{/if}}
+              {{/unless}}
+          {{!-- </div> --}}
+        {{/each}}       
+  {{/with}}
+ <hr>
+ </div>
+{{!-- {{/with}} --}}
+</header>
+
+<main>
+ <div>
+  {{#each itemList}}
+    <div class="row m-2">
+         <div class="col-4 text-start">
+              <p>{{number}}</p>
+              <p><b>{{status}}</b></p>
+         </div>
+
+          <div class="col-2 text-start">
+             {{#with amount}} 
+              <p>{{title}}</p>
+              <p><b>{{value}}</b></p>
+             {{/with}} 
+         </div>
+
+         <div class="col-4 text-start">
+              <div class="row">
+                {{#each images}}
+                   <div class="col-4 text-center">
+                      {{!-- {{#each images}} --}}
+                            <img src={{this}} class="card-img-top px-2" alt="Image">
+                      {{!-- {{/each}} --}}
+                   </div>
+                {{/each}}   
+              </div>
+         </div>
+
+         <div class="col-2 text-start">
+             {{#with button}} 
+               <a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{text}}</b></a>
+             {{/with}} 
+         </div>
+      <hr>   
+    </div>
+  {{/each}}
+ <hr>
+ </div>
+{{/with}}
+
+
+   <div> {{!-- <h3>Особиста інформація</h3> --}}
+     {{#with userInfo}}
+       <h2 class="my-5">{{title}}</h2>
+        <div class="card"> {{!-- Особиста інформація базова карточка --}}
+          {{#with profileData}}
+            <h3 class="m-3">{{title}}</h3>
+                <div class="card m-2">
+                  <div class="row m-2">
+                  {{#with fullName}}
+                    <div class="col-4 text-start">
+                         {{#with surname}}
+                           <p class="pt-2">{{title}}</p>
+                           <p><b>{{value}}</b></p>
+                         {{/with}}
+                    </div>
+                    <div class="col-4 text-start">
+                         {{#with name}}
+                           <p class="pt-2">{{title}}</p>
+                           <p><b>{{value}}</b></p>
+                         {{/with}}
+                    </div>
+                    <div class="col-4 text-start">
+                         {{#with middleName}}
+                           <p class="pt-2">{{title}}</p>
+                           <p><b>{{value}}</b></p>
+                         {{/with}}
+                    </div>
+                  {{/with}} 
+                 </div>
+               </div>
+
+                <div class="card m-2">
+                  <div class="row m-2">
+                  {{#with otherInfo}}
+                    <div class="col-4 text-start">
+                         {{#with birthday}}
+                           <p class="pt-2">{{title}}</p>
+                           <p><b>{{value}}</b></p>
+                         {{/with}}
+                    </div>
+                    <div class="col-4 text-start">
+                         {{#with sex}}
+                           <p class="pt-2">{{title}}</p>
+                           <p><b>{{value}}</b></p>
+                         {{/with}}
+                    </div>
+                    <div class="col-4 text-start">
+                         {{#with language}}
+                           <p class="pt-2">{{title}}</p>
+                           <p><b>{{value}}</b></p>
+                         {{/with}}
+                    </div>
+                  {{/with}} 
+                  </div>
+            </div>    
+         {{/with}}
+
+      <div class="card m-2">
+       <div class="row m-2">
+        {{#each buttons}}
+          <div class="col-4 text-start">
+            {{#if isPrimary}}
+             <a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{text}}</b></a>
+            {{/if}}
+              {{#unless isPrimary}}  
+                {{#if isSecondary}}
+                 <a href="{{link}}" class="btn btn-outline-secondary" target="_blank"><b>{{text}}</b></a>
+                    {{else}}
+                   <a href="{{link}}" class="btn btn-outline-danger" target="_blank"><b>{{text}}</b></a>
+                {{/if}}
+              {{/unless}}
+          </div>
+        {{/each}}
+       </div>         
+      </div>       
+        </div> {{!-- Базова карточка Особиста інформація--}}
+       
+          <div class="card my-3"> {{!-- Отримувачі базова карточка --}}
+          {{#with recipients}}
+            <h3 class="m-3">{{title}}</h3>
+                {{!-- {{#each users}} --}}
+                <div class="row">
+                     {{#each users}}
+                        <div class="card col-4 text-start m-3 p-2">
+                            <h6>{{name}}</h6>
+                            <p>{{phone}}</p>
+                          {{#with button}}
+                            <a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{text}}</b></a>
+                          {{/with}}
+                        </div> {{!-- <div class="card col-4 text-start p-2"> --}}
+                       {{!-- </div>     --}}
+                    {{/each}}
+                </div> {{!-- <div class="row"> --}}
+          {{/with}}
+          </div> {{!-- Отримувачі базова карточка --}}
+
+                <div class="card"> {{!-- Базова карточка-Контакти --}}
+                  {{#with contacts}}
+                    <h3 class="m-3">{{title}}</h3>
+                     <div class="row"> {{!-- <div class="row-Контакти"> --}}
+                     {{#each contactData}}
+                        <div class="card col-3 text-start m-3 p-2">
+                            <p><b>{{title}}</b></p>
+                            <h5>{{value}}</h5>
+                          {{#with button}}
+                            {{!-- <a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{text}}</b></a> --}}
+                             {{#if isPrimary}}
+                                   <a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{text}}</b></a>
+                             {{/if}}
+                               {{#unless isPrimary}}  
+                                  {{#if isSecondary}}
+                                    <a href="{{link}}" class="btn btn-outline-secondary" target="_blank"><b>{{text}}</b></a>
+                                    {{else}}
+                                    <a href="{{link}}" class="btn btn-outline-danger" target="_blank"><b>{{text}}</b></a>
+                                  {{/if}}
+                               {{/unless}}
+                          {{/with}}
+                        </div> {{!-- <div class="card col-4 text-start p-2"> --}}
+                       {{!-- </div>     --}}
+                    {{/each}}
+                     </div> {{!-- <div class="row-Контакти"> --}}
+                  {{/with}}
+                </div> {{!-- Базова карточка-Контакти--}}
+    <hr> 
+    {{/with}}
+   </div> {{!-- <h3>Особиста інформація</h3> --}}
+</main>
+
+<footer>
+  <div class="container text-left">
+    <div class="row gx-2">
+      {{#each footer}}
+        <div class="col-2">
+         {{#each this}}
+          {{#if isDisabled}}
+            <div class="p-2"><a href="{{href}}" class="nav-link disabled" target="_blank">{{text}}</a></div>
+          {{else}}
+            <div class="p-2"><a href="{{link}}" class="nav-link" target="_blank">{{text}}</a></div>
+          {{/if}}
+         {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+ <hr> 
+ {{!-- <h3>footer</h3> --}}
+</footer>
