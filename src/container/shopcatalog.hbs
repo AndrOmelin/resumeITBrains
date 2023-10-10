@@ -1,0 +1,212 @@
+<header>
+ {{#with navigation}}
+  <div class="card">
+   <div class="nav">
+    {{#each links}}
+     <div class="nav-item">
+        <a href="{{href}}" class="nav-link" target="_blank">{{text}}</a>
+     </div>
+    {{/each}}
+   </div>
+  </div>
+ {{/with}}
+</header>
+
+<main>
+ <nav class="nav text-start my-5">
+  {{#each breadcrumb}}
+    {{#if url}}
+      <a class="nav-link" href="{{url}}" target="_blank">{{name}} /</a>
+      {{!-- <a class="nav-link disabled" aria-disabled="true">{{name}}</a> --}}
+         {{else}}
+      <a class="nav-link disabled" aria-disabled="true">{{name}}</a>   
+      {{!-- <a class="nav-link" href="{{url}}">{{name}} /</a> --}}
+    {{/if}}
+  {{/each}}
+ </nav>
+
+ <br>
+
+ <h1 class="text-start">{{header}}</h1>
+
+ <div class="row">
+      {{#each sortBlock}}
+       <div class="col-sm-3 text-start my-1">
+        <select class="form-select">
+          <option selected>{{placeholder}}</option>
+           {{#each options}}
+            <option value="{{value}}">{{text}}</option>
+           {{/each}}
+        </select> 
+        <br>
+       </div> {{!-- <div class="col-sm-3 text-start my-1"> --}}     
+      {{/each}}{{!-- {{#each sortBlock}} --}}  
+      <br>
+
+
+         {{!-- <div class="row my-5"> --}}
+        <div class="card col-sm-4 text-start px-1">
+          {{#with filterBlock}}
+           <div class="text-start m-3">
+            {{#with sellers}}
+              <h5 class="text-start">{{title}}</h5>
+                {{#each list}}
+                 <div class="form-check text-start">
+                   <label class="form-check-label">{{value}}</label>
+                   <input name="quiz" type="radio" class="form-check-input">
+                 </div>
+                {{/each}}
+            {{/with}}
+               <hr>
+           </div>
+
+            <div class="text-start mx-3 my-1"> {{!-- {{#with brands}} --}}
+               {{#with brands}}
+                 <label class="form-label"><b>{{title}}</b></label>
+                  {{#with input}}
+                    <input class="form-control" placeholder="{{placeholder}}">
+                  {{/with}}
+
+                 <div class="text-start m-1">
+                  {{#each options}}
+                   <div class="form-check text-start">
+                     <label class="form-check-label">{{value}}</label>
+                     <input name="quiz" type="checkbox" class="form-check-input">
+                   </div>
+                  {{/each}}
+               {{/with}}
+                   <hr>
+                 </div>
+
+                   <div>{{!-- {{#with price}} --}}
+                     {{#with price}}
+                       <label class="form-label"><b>{{title}}</b></label>
+                              {{#with range}}
+                                <input class="form-control my-2" placeholder="{{from}}">
+                                       <input class="form-control my-2" placeholder="{{to}}">
+                              {{/with}}
+                                 {{#with button}}
+                                    <a href="{{link}}" class="btn btn-outline-secondary" target="_blank"><b>{{text}}</b></a>                              
+                                 {{/with}}   
+                     {{/with}}{{!-- {{#with price}} --}}
+                   </div>{{!-- {{#with price}} --}}
+
+                   <div>
+                      {{#each filterList}}
+                       <label class="form-label"><b>{{title}}</b></label>
+                        <div class="text-start m-1">
+                         {{#each options}}
+                           <div class="form-check text-start">
+                            <label class="form-check-label">{{value}}</label>
+                            <input name="quiz" type="checkbox" class="form-check-input">
+                           </div>
+                        {{/each}}
+               {{!-- {{/each}} --}}
+                       </div>
+                      {{/each}} 
+                   </div>    
+                     <hr>
+            </div>{{!-- {{#with brands}} --}}  
+        </div> {{!-- <div class="card col-sm-4 text-start px-1"> --}}
+      {{/with}}
+      
+
+      <div class="col-sm-8 text-start">
+        <div class="row text-start">
+             {{#each goodsList}}
+              <div class="card col-sm-5 mx-2 mb-2">
+                 <img src={{img}} class="card-img-top " alt="Image">
+                  <div class="card-body">
+                       <div>
+                        {{#if isHot}}<span class="badge rounded-pill text-bg-warning text-light my-1 mb-2">HOT!</span>{{/if}}
+                        {{#if isNew}}<span class="badge rounded-pill text-bg-primary text-light">Нове</span>{{/if}}
+                       </div>
+                         <div>
+                            {{#if isFast}}
+                                <div class="text-start my-2">
+                                     <span class="badge text-bg-success"><b>Швидка доставка</b></span>
+                                </div>
+                            {{/if}}
+                         </div>
+                           <div>
+                            {{#if isFree}}
+                                <div class="text-start my-2">
+                                     <span class="badge text-bg-secondary"><b>Безкоштовна доставка</b></button>
+                                </div>
+                            {{/if}}
+                           </div>
+                   <h5 class="card-title">{{name}}</h5>
+                       {{#with review}}
+                    <p class="card-text">{{amount}} {{text}}</p>
+                       {{/with}}
+                   <h4 class="card-title">{{price}}</h4>
+                  <p class="card-text">{{delivery}}</p>
+                     {{#each buttons}}
+                        {{#if isPrimary}}
+                          <div class="text-start my-2">
+                             <a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{text}}</b></a>
+                          </div>
+                        {{/if}} 
+                          {{#if isSecondary}}
+                            <div class="text-start my-2">
+                               <a href="{{link}}" class="btn btn-secondary" target="_blank"><b>{{text}}</b></a>
+                            </div>
+                          {{/if}}     
+                     {{/each}}
+                    <ul> 
+                      {{#each characteristics}}
+                       {{!-- {{#each this}} --}}
+                        <li>{{title}} <b>{{value}}</b></li>
+                       {{!-- {{/each}} --}}
+                      {{/each}}
+                    </ul>   
+                </div>
+              </div> 
+
+                  {{!-- <div class="card col-sm-5 text-start mx-2 mb-2">
+                       <img src={{img}} class="card-img-top " alt="Image">
+                  </div> <div class="card col-sm-5 text-start mx-2 mb-2 px-2"> --}}
+             {{/each}}
+        </div>{{!-- <div class="row col-sm-8"> --}}
+      </div>
+
+ </div> {{!-- <div class="row"> --}}
+
+
+  {{!-- GREEN CARD --}}
+  <div>
+   {{#with service}}
+    <div class="card w-100 my-5">
+     <div class="card-body text-bg-success text-center">
+      <h5 class="card-title ">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          {{#each buttons}} 
+           <a href="{{link}}" class="btn btn-primary" target="_blank">{{text}}</a>
+          {{/each}}
+     </div>
+    </div>
+   {{/with}}
+   <hr>  
+  </div>
+
+</main>
+
+<footer>
+  <div class="container text-left">
+    <div class="row gx-2">
+      {{#each footer}}
+        <div class="col-2">
+         {{#each this}}
+          {{#if isDisabled}}
+            <div class="p-2"><a href="{{href}}" class="nav-link disabled" target="_blank">{{text}}</a></div>
+          {{else}}
+            <div class="p-2"><a href="{{link}}" class="nav-link" target="_blank">{{text}}</a></div>
+          {{/if}}
+         {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+ <hr> 
+ {{!-- <h3>footer</h3> --}}
+</footer>
