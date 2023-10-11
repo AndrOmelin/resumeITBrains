@@ -9,8 +9,8 @@ const router = express.Router()
 
 var header = {
      name: {
-    firstname: 'Dmytro',
-    lastname: 'Ivanchuk',      
+    firstname: 'Andros',
+    lastname: 'Melinus',      
   },
 
   position: 'junior Fullstack JS Developer',
@@ -61,7 +61,115 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    
+    layout: 'index',
+   
+    header: {
+      user_name: "Andros",
+      user_surname: "Melinus",
+      project_title: "ResumeMelinusAproject"
+    },
+
+    main: {
+      title: 'Перелік сторінок',
+      description: 'Перелік сторінок створенних в рамках освоєння модулів - Шаблонізатор та Бутстрап',
+    },
+
+    pages: [
+      {
+        name: 'My Skills',
+        link: 'http://localhost:3000/skills',
+      },
+
+      {
+        name: 'Summary',
+        link: 'http://localhost:3000/summary',
+      },
+
+      {
+        name: 'Education',
+        link: 'http://localhost:3000/education',
+      },
+
+      {
+        name: 'Work',
+        link: 'http://localhost:3000/work',
+      },
+      
+      {
+        name: 'Bio',
+        link: 'http://localhost:3000/bio',
+      },
+            
+      {
+        name: 'Car',
+        link: 'http://localhost:3000/car',
+      },
+
+      {
+        name: 'Error',
+        link: 'http://localhost:3000/error',
+      },
+      
+      {
+        name: 'Facebook',
+        link: 'http://localhost:3000/facebook',
+      },
+
+      {
+        name: 'JavaScript',
+        link: 'http://localhost:3000/js',
+      },
+
+      {
+        name: 'MacBook',
+        link: 'http://localhost:3000/mac',
+      },
+
+      {
+        name: 'Person',
+        link: 'http://localhost:3000/person',
+      },
+
+      {
+        name: 'Program',
+        link: 'http://localhost:3000/program',
+      },
+
+      {
+        name: 'Shopcart',
+        link: 'http://localhost:3000/shopcart',
+      },
+
+      {
+        name: 'Shopcatalog',
+        link: 'http://localhost:3000/shopcatalog',
+      },
+
+      {
+        name: 'Shophome',
+        link: 'http://localhost:3000/shophome',
+      },
+      
+      {
+        name: 'Shoporder',
+        link: 'http://localhost:3000/shoporder',
+      },
+
+      {
+        name: 'Shopprofile',
+        link: 'http://localhost:3000/shopprofile',
+      },
+
+      {
+        name: 'Shopreview',
+        link: 'http://localhost:3000/shopreview',
+      },
+
+    ],
+
+ })
 })
 
 // ================================================================
@@ -302,6 +410,7 @@ router.get('/work', function (req, res) {
                 name: 'Nodejs',
               },
             ],
+            
             awards: [
               {
                 name: 'HOP-HEY',

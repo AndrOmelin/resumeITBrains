@@ -2,11 +2,16 @@
 Це код container файлу для index сторінки, 
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
  --}}
+{{!-- <div class="p-5"></div> --}}
+<div class="px-5">
+    {{#with main}}
+    <h1 class="my-2">{{title}}</h1>
+    <p>{{description}}</p>
+    {{/with}}
 
-<div class="p-5">
-    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-    <button type="button" class="btn btn-secondary">Купити</button>
+  {{#each pages}}
+    <div class="my-2"><a href="{{link}}" class="btn btn-primary" target="_blank"><b>{{name}}</b></a></div>
+  {{/each}}
 </div>
 
 {{!-- 
