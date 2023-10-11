@@ -79,92 +79,92 @@ router.get('/', function (req, res) {
     pages: [
       {
         name: 'My Skills',
-        link: 'http:/skills',
+        link: '/skills',
       },
 
       {
         name: 'Summary',
-        link: 'http:/summary',
+        link: '/summary',
       },
 
       {
         name: 'Education',
-        link: 'http:/education',
+        link: '/education',
       },
 
       {
         name: 'Work',
-        link: 'http:/work',
+        link: '/work',
       },
       
       {
         name: 'Bio',
-        link: 'http:/bio',
+        link: '/bio',
       },
             
       {
         name: 'Car',
-        link: 'http:/car',
+        link: '/car',
       },
 
       {
         name: 'Error',
-        link: 'http:/error',
+        link: '/error',
       },
       
       {
         name: 'Facebook',
-        link: 'http:/facebook',
+        link: '/facebook',
       },
 
       {
         name: 'JavaScript',
-        link: 'http:/js',
+        link: '/js',
       },
 
       {
         name: 'MacBook',
-        link: 'http:/mac',
+        link: '/mac',
       },
 
       {
         name: 'Person',
-        link: 'http:/person',
+        link: '/person',
       },
 
       {
         name: 'Program',
-        link: 'http:/program',
+        link: '/program',
       },
 
       {
         name: 'Shopcart',
-        link: 'http:/shopcart',
+        link: '/shopcart',
       },
 
       {
         name: 'Shopcatalog',
-        link: 'http:/shopcatalog',
+        link: '/shopcatalog',
       },
 
       {
         name: 'Shophome',
-        link: 'http:/shophome',
+        link: '/shophome',
       },
       
       {
         name: 'Shoporder',
-        link: 'http:/hoporder',
+        link: '/hoporder',
       },
 
       {
         name: 'Shopprofile',
-        link: 'http:/shopprofile',
+        link: '/shopprofile',
       },
 
       {
         name: 'Shopreview',
-        link: 'http:/shopreview',
+        link: '/shopreview',
       },
 
     ],
