@@ -79,92 +79,92 @@ router.get('/', function (req, res) {
     pages: [
       {
         name: 'My Skills',
-        link: 'http://localhost:3000/skills',
+        link: 'http:/skills',
       },
 
       {
         name: 'Summary',
-        link: 'http://localhost:3000/summary',
+        link: 'http:/summary',
       },
 
       {
         name: 'Education',
-        link: 'http://localhost:3000/education',
+        link: 'http:/education',
       },
 
       {
         name: 'Work',
-        link: 'http://localhost:3000/work',
+        link: 'http:/work',
       },
       
       {
         name: 'Bio',
-        link: 'http://localhost:3000/bio',
+        link: 'http:/bio',
       },
             
       {
         name: 'Car',
-        link: 'http://localhost:3000/car',
+        link: 'http:/car',
       },
 
       {
         name: 'Error',
-        link: 'http://localhost:3000/error',
+        link: 'http:/error',
       },
       
       {
         name: 'Facebook',
-        link: 'http://localhost:3000/facebook',
+        link: 'http:/facebook',
       },
 
       {
         name: 'JavaScript',
-        link: 'http://localhost:3000/js',
+        link: 'http:/js',
       },
 
       {
         name: 'MacBook',
-        link: 'http://localhost:3000/mac',
+        link: 'http:/mac',
       },
 
       {
         name: 'Person',
-        link: 'http://localhost:3000/person',
+        link: 'http:/person',
       },
 
       {
         name: 'Program',
-        link: 'http://localhost:3000/program',
+        link: 'http:/program',
       },
 
       {
         name: 'Shopcart',
-        link: 'http://localhost:3000/shopcart',
+        link: 'http:/shopcart',
       },
 
       {
         name: 'Shopcatalog',
-        link: 'http://localhost:3000/shopcatalog',
+        link: 'http:/shopcatalog',
       },
 
       {
         name: 'Shophome',
-        link: 'http://localhost:3000/shophome',
+        link: 'http:/shophome',
       },
       
       {
         name: 'Shoporder',
-        link: 'http://localhost:3000/shoporder',
+        link: 'http:/hoporder',
       },
 
       {
         name: 'Shopprofile',
-        link: 'http://localhost:3000/shopprofile',
+        link: 'http:/shopprofile',
       },
 
       {
         name: 'Shopreview',
-        link: 'http://localhost:3000/shopreview',
+        link: 'http:/shopreview',
       },
 
     ],
